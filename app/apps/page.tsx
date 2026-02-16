@@ -4,7 +4,8 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import {
   BarChart3, Linkedin, ListTodo, Sparkles, ArrowRight,
-  Shield, Zap, Globe, Eye, MessageSquare, Target, Power
+  Shield, Zap, Globe, Eye, MessageSquare, Target, Power,
+  GraduationCap
 } from "lucide-react"
 import Nav from "@/components/Nav"
 
@@ -43,6 +44,17 @@ const APPS = [
     status: "live",
   },
   {
+    id: "courses",
+    name: "AI Course Builder",
+    tagline: "Generate Complete Courses",
+    description: "Enter a topic and AI generates a full curriculum — modules, lessons, quizzes, and content. Export as JSON or teach directly.",
+    icon: GraduationCap,
+    color: "#9945ff",
+    badge: "AI Generator",
+    features: ["Full curriculum", "Lesson content", "Quiz builder", "JSON export"],
+    status: "live",
+  },
+  {
     id: "qadist",
     name: "QA Distribution",
     tagline: "SEO Content Engine",
@@ -59,7 +71,7 @@ const APPS = [
     tagline: "AI Behavior Training",
     description: "Train portable AI behaviors, export as .brain files, deploy on any LLM. The Brain/Skull/Body paradigm.",
     icon: Sparkles,
-    color: "#9945ff",
+    color: "#ff3d9a",
     badge: "Coming Soon",
     features: ["Brain training", ".brain export", "Marketplace", "LLM-agnostic"],
     status: "soon",
