@@ -5,11 +5,22 @@ import { motion } from "framer-motion"
 import {
   BarChart3, Linkedin, ListTodo, Sparkles, ArrowRight,
   Shield, Zap, Globe, Eye, MessageSquare, Target, Power,
-  GraduationCap
+  GraduationCap, Bot
 } from "lucide-react"
 import Nav from "@/components/Nav"
 
 const APPS = [
+  {
+    id: "assistant",
+    name: "0nMCP Assistant",
+    tagline: "AI Chat Interface",
+    description: "Browser-based assistant for 0nMCP. Dual-mode execution (Anthropic API or local server), tool detection, workflow generation, and .0n config export.",
+    icon: Bot,
+    color: "#00ff88",
+    badge: "Chat + Execute",
+    features: ["Dual execution mode", "Tool detection", "Workflow builder", "Quick actions"],
+    status: "live",
+  },
   {
     id: "cro9",
     name: "CRO9",
