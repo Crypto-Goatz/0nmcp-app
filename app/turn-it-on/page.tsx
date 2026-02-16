@@ -9,6 +9,7 @@ import {
   ArrowLeftRight, Filter, X
 } from "lucide-react"
 import Nav from "@/components/Nav"
+import AddToList from "@/components/AddToList"
 import { cn } from "@/lib/utils"
 import {
   EXPANDED_SERVICES, CAPABILITIES, SECTIONS, EXPANSION_STATS,
@@ -368,6 +369,12 @@ export default function TurnItOnPage() {
                       {copiedId === cap.id ? <Check size={10} /> : <Copy size={10} />}
                       .0n
                     </button>
+                    <AddToList
+                      text={`Implement: ${cap.name} (${a?.name} → ${b?.name})`}
+                      source="Turn it 0n"
+                      inline
+                      className="opacity-0 group-hover:opacity-100"
+                    />
                   </motion.div>
                 )
               })}
@@ -531,6 +538,11 @@ export default function TurnItOnPage() {
                           >
                             {copiedId === cap.id ? <Check size={10} /> : <Copy size={10} />}
                           </button>
+                          <AddToList
+                            text={`Implement: ${cap.name} (${a?.name} → ${b?.name})`}
+                            source="Connection Builder"
+                            inline
+                          />
                         </motion.div>
                       )
                     })}

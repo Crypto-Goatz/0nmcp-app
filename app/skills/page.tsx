@@ -8,6 +8,7 @@ import {
   Zap, ArrowRight, Shield, Clock, Star
 } from "lucide-react"
 import Nav from "@/components/Nav"
+import AddToList from "@/components/AddToList"
 import { SKILLS, SERVICES } from "@/lib/catalog"
 
 const LEVEL_CONFIG = {
@@ -99,12 +100,19 @@ export default function SkillsPage() {
                       <Sparkles size={16} className="text-pink" />
                       <span className="font-bold text-text text-sm">{skill.name}</span>
                     </div>
-                    <span
-                      className="text-[10px] font-bold px-2 py-0.5 rounded-full"
-                      style={{ background: config.color + "18", color: config.color }}
-                    >
-                      L{skill.level}
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <AddToList
+                        text={`Set up skill: ${skill.name} — ${skill.description}`}
+                        source="Skills"
+                        inline
+                      />
+                      <span
+                        className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+                        style={{ background: config.color + "18", color: config.color }}
+                      >
+                        L{skill.level}
+                      </span>
+                    </div>
                   </div>
 
                   <p className="text-xs text-text-dim leading-relaxed mb-3">{skill.description}</p>

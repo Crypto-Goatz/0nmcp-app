@@ -7,6 +7,7 @@ import {
   Search, Server, ArrowRight, Filter, BarChart3
 } from "lucide-react"
 import Nav from "@/components/Nav"
+import AddToList from "@/components/AddToList"
 import { SERVICES, CATEGORIES, STATS, type Service } from "@/lib/catalog"
 import { cn } from "@/lib/utils"
 
@@ -156,8 +157,15 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           <span className="text-[10px] text-text-muted">{service.triggers} triggers</span>
         </div>
 
-        <div className="text-[10px] text-text-muted mt-3 uppercase tracking-wider" style={{ color: cat?.color }}>
-          {cat?.label || service.category}
+        <div className="flex items-center justify-between mt-3">
+          <div className="text-[10px] text-text-muted uppercase tracking-wider" style={{ color: cat?.color }}>
+            {cat?.label || service.category}
+          </div>
+          <AddToList
+            text={`Configure ${service.name} service (${service.tools} tools, ${service.actions} actions)`}
+            source="Services"
+            inline
+          />
         </div>
       </Link>
     </motion.div>

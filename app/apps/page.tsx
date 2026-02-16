@@ -8,6 +8,7 @@ import {
   GraduationCap, Bot, Brain, Rocket, Paintbrush
 } from "lucide-react"
 import Nav from "@/components/Nav"
+import AddToList from "@/components/AddToList"
 
 const APPS = [
   {
@@ -183,11 +184,18 @@ export default function AppsPage() {
                   ))}
                 </div>
 
-                {app.status !== "soon" && (
-                  <div className="flex items-center gap-1 text-xs font-bold group-hover:gap-2 transition-all" style={{ color: app.color }}>
-                    Open App <ArrowRight size={12} />
-                  </div>
-                )}
+                <div className="flex items-center justify-between">
+                  {app.status !== "soon" && (
+                    <div className="flex items-center gap-1 text-xs font-bold group-hover:gap-2 transition-all" style={{ color: app.color }}>
+                      Open App <ArrowRight size={12} />
+                    </div>
+                  )}
+                  <AddToList
+                    text={`Explore ${app.name}: ${app.description}`}
+                    source="Apps Hub"
+                    size="sm"
+                  />
+                </div>
               </Link>
             </motion.div>
           ))}
