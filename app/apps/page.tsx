@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import {
   BarChart3, Linkedin, ListTodo, Sparkles, ArrowRight,
   Shield, Zap, Globe, Eye, MessageSquare, Target, Power,
-  GraduationCap, Bot
+  GraduationCap, Bot, Brain, Rocket, Paintbrush
 } from "lucide-react"
 import Nav from "@/components/Nav"
 
@@ -77,12 +77,45 @@ const APPS = [
     status: "live",
   },
   {
+    id: "trainer",
+    name: "AI Trainer",
+    tagline: "Universal Config Platform",
+    description: "Import credentials from any format, train skill layers interactively, and export to 18+ AI platforms with .rocket encryption.",
+    icon: Brain,
+    color: "#00d4ff",
+    badge: "18+ Platforms",
+    features: ["Multi-format import", "Skill training", ".rocket encryption", "Brain factory"],
+    status: "live",
+  },
+  {
+    id: "smartdeploy",
+    name: "JSON SmartDeploy",
+    tagline: "Workflow Deployment Engine",
+    description: "5-stage intelligent pipeline — Parse, Resolve, Generate, Map, Deploy. Auto-detects missing assets and AI-creates them.",
+    icon: Rocket,
+    color: "#ff6b35",
+    badge: "5-Stage Pipeline",
+    features: ["Auto-detection", "AI generation", "ID mapping", "CRM deploy"],
+    status: "live",
+  },
+  {
+    id: "canvas",
+    name: "APEX Canvas",
+    tagline: "Visual Page Builder",
+    description: "36+ components, AI-powered page generation, responsive preview, and multi-platform export to HTML, React, Vue, Shopify, and more.",
+    icon: Paintbrush,
+    color: "#ff3d9a",
+    badge: "AI Builder",
+    features: ["36+ components", "AI generation", "Responsive preview", "12 export formats"],
+    status: "live",
+  },
+  {
     id: "botcoaches",
     name: "BotCoaches",
     tagline: "AI Behavior Training",
     description: "Train portable AI behaviors, export as .brain files, deploy on any LLM. The Brain/Skull/Body paradigm.",
     icon: Sparkles,
-    color: "#ff3d9a",
+    color: "#9945ff",
     badge: "Coming Soon",
     features: ["Brain training", ".brain export", "Marketplace", "LLM-agnostic"],
     status: "soon",
