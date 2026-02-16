@@ -4,11 +4,23 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import {
   BarChart3, Linkedin, ListTodo, Sparkles, ArrowRight,
-  Shield, Zap, Globe, Eye, MessageSquare, Target, Power
+  Shield, Zap, Globe, Eye, MessageSquare, Target, Power,
+  GraduationCap, Bot, Brain, Rocket, Paintbrush
 } from "lucide-react"
 import Nav from "@/components/Nav"
 
 const APPS = [
+  {
+    id: "assistant",
+    name: "0nMCP Assistant",
+    tagline: "AI Chat Interface",
+    description: "Browser-based assistant for 0nMCP. Dual-mode execution (Anthropic API or local server), tool detection, workflow generation, and .0n config export.",
+    icon: Bot,
+    color: "#00ff88",
+    badge: "Chat + Execute",
+    features: ["Dual execution mode", "Tool detection", "Workflow builder", "Quick actions"],
+    status: "live",
+  },
   {
     id: "cro9",
     name: "CRO9",
@@ -43,6 +55,17 @@ const APPS = [
     status: "live",
   },
   {
+    id: "courses",
+    name: "AI Course Builder",
+    tagline: "Generate Complete Courses",
+    description: "Enter a topic and AI generates a full curriculum — modules, lessons, quizzes, and content. Export as JSON or teach directly.",
+    icon: GraduationCap,
+    color: "#9945ff",
+    badge: "AI Generator",
+    features: ["Full curriculum", "Lesson content", "Quiz builder", "JSON export"],
+    status: "live",
+  },
+  {
     id: "qadist",
     name: "QA Distribution",
     tagline: "SEO Content Engine",
@@ -51,6 +74,39 @@ const APPS = [
     color: "#00d4ff",
     badge: "12 Platforms",
     features: ["Multi-platform AI", "Reddit monitor", "Forum discovery", "Quality scoring"],
+    status: "live",
+  },
+  {
+    id: "trainer",
+    name: "AI Trainer",
+    tagline: "Universal Config Platform",
+    description: "Import credentials from any format, train skill layers interactively, and export to 18+ AI platforms with .rocket encryption.",
+    icon: Brain,
+    color: "#00d4ff",
+    badge: "18+ Platforms",
+    features: ["Multi-format import", "Skill training", ".rocket encryption", "Brain factory"],
+    status: "live",
+  },
+  {
+    id: "smartdeploy",
+    name: "JSON SmartDeploy",
+    tagline: "Workflow Deployment Engine",
+    description: "5-stage intelligent pipeline — Parse, Resolve, Generate, Map, Deploy. Auto-detects missing assets and AI-creates them.",
+    icon: Rocket,
+    color: "#ff6b35",
+    badge: "5-Stage Pipeline",
+    features: ["Auto-detection", "AI generation", "ID mapping", "CRM deploy"],
+    status: "live",
+  },
+  {
+    id: "canvas",
+    name: "APEX Canvas",
+    tagline: "Visual Page Builder",
+    description: "36+ components, AI-powered page generation, responsive preview, and multi-platform export to HTML, React, Vue, Shopify, and more.",
+    icon: Paintbrush,
+    color: "#ff3d9a",
+    badge: "AI Builder",
+    features: ["36+ components", "AI generation", "Responsive preview", "12 export formats"],
     status: "live",
   },
   {
