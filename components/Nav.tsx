@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   Zap, Server, Layers, Sparkles, Terminal, Settings,
-  Globe, Menu, X, LayoutDashboard, GitBranch
+  Globe, Menu, X, LayoutDashboard, GitBranch, Grid3X3, Power
 } from "lucide-react"
 import { STATS } from "@/lib/catalog"
 import { cn } from "@/lib/utils"
@@ -17,6 +17,8 @@ const NAV_ITEMS = [
   { href: "/skills", label: "Skills", icon: Sparkles },
   { href: "/builder", label: "Builder", icon: GitBranch },
   { href: "/architecture", label: "Architecture", icon: Layers },
+  { href: "/apps", label: "Apps", icon: Grid3X3 },
+  { href: "/turn-it-on", label: "Turn it 0n", icon: Power },
 ]
 
 export default function Nav() {

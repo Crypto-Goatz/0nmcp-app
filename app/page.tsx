@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { STATS, SERVICES, CATEGORIES, SKILLS } from "@/lib/catalog"
+import { EXPANSION_STATS } from "@/lib/services-expansion"
 import {
   Zap, Server, Layers, Radio, Sparkles, ArrowRight,
-  GitBranch, Shield, Globe, ChevronRight, Terminal
+  GitBranch, Shield, Globe, ChevronRight, Terminal, Power
 } from "lucide-react"
 import Nav from "@/components/Nav"
 
@@ -98,14 +99,14 @@ export default function Home() {
               Universal AI API Orchestrator
             </div>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              <span className="gradient-text">{STATS.tools} Tools.</span>
+              <span className="gradient-text">{EXPANSION_STATS.services} Services.</span>
               <br />
-              <span className="text-text">{STATS.services} Services.</span>
+              <span className="text-text">{EXPANSION_STATS.totalCapabilities.toLocaleString()}+ Capabilities.</span>
               <br />
-              <span className="text-text-dim">One Command.</span>
+              <span className="text-text-dim">Turn it 0n.</span>
             </h1>
             <p className="text-lg text-text-dim max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
-              Chain, combine, and automate MCP servers with natural language.
+              Connect any service to any service with one command. No code. No Zapier.
               The most comprehensive MCP orchestrator available.
             </p>
 
@@ -122,6 +123,10 @@ export default function Home() {
               <Link href="/builder" className="flex items-center gap-2 px-5 py-2.5 rounded-xl glass-card text-text font-semibold text-sm hover:bg-white/[0.06] transition-all">
                 <GitBranch size={16} />
                 Build Skills
+              </Link>
+              <Link href="/turn-it-on" className="flex items-center gap-2 px-5 py-2.5 rounded-xl glass-card text-neon font-semibold text-sm hover:bg-neon/5 transition-all border border-neon/20">
+                <Power size={16} />
+                Turn it 0n
               </Link>
             </div>
           </div>
