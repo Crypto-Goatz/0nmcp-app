@@ -24,6 +24,8 @@ interface ConnectionStatus {
 }
 
 export default function CommandCenter() {
+  const [mounted, setMounted] = useState(false)
+  const [currentTime, setCurrentTime] = useState("")
   const [stats, setStats] = useState<WorkflowStats>({
     total: 47,
     active: 12,
@@ -48,13 +50,24 @@ export default function CommandCenter() {
   ])
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    setMounted(true)
+    setCurrentTime(new Date().toLocaleTimeString())
+    
+    const timeInterval = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString())
+    }, 1000)
+
+    const statsInterval = setInterval(() => {
       setStats(prev => ({
         ...prev,
         executions: prev.executions + Math.floor(Math.random() * 3)
       }))
     }, 3000)
-    return () => clearInterval(interval)
+    
+    return () => {
+      clearInterval(timeInterval)
+      clearInterval(statsInterval)
+    }
   }, [])
 
   return (
@@ -80,7 +93,7 @@ export default function CommandCenter() {
                 <div className="w-2 h-2 rounded-full bg-neon animate-pulse" />
                 <span className="text-xs font-bold text-neon">LIVE</span>
               </div>
-              <span className="text-xs text-text-muted">Last updated: {new Date().toLocaleTimeString()}</span>
+              {mounted && <span className="text-xs text-text-muted">Last updated: {currentTime}</span>}
             </div>
           </div>
 
