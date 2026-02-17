@@ -5,13 +5,14 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   Zap, Server, Layers, Sparkles, Terminal, Settings,
-  Globe, Menu, X, LayoutDashboard, GitBranch, Grid3X3, Power
+  Globe, Menu, X, LayoutDashboard, GitBranch, Grid3X3, Power, Radio
 } from "lucide-react"
 import { STATS } from "@/lib/catalog"
 import { cn } from "@/lib/utils"
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: LayoutDashboard },
+  { href: "/command", label: "Command", icon: Radio },
   { href: "/console", label: "Console", icon: Terminal },
   { href: "/services", label: "Services", icon: Server },
   { href: "/skills", label: "Skills", icon: Sparkles },
