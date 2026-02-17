@@ -19,6 +19,7 @@ const NAV_ITEMS = [
   { href: "/architecture", label: "Architecture", icon: Layers },
   { href: "/apps", label: "Apps", icon: Grid3X3 },
   { href: "/turn-it-on", label: "Turn it 0n", icon: Power },
+  { href: "/settings", label: "Settings", icon: Settings },
 ]
 
 export default function Nav() {
