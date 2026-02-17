@@ -29,8 +29,9 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser()
 
-  // Protect community routes — redirect to login if not authenticated
-  if (!user && request.nextUrl.pathname.startsWith("/community")) {
+  // Protect authenticated routes — redirect to login if not authenticated
+  const protectedPaths = ["/community", "/composer"]
+  if (!user && protectedPaths.some(p => request.nextUrl.pathname.startsWith(p))) {
     const url = request.nextUrl.clone()
     url.pathname = "/login"
     url.searchParams.set("redirect", request.nextUrl.pathname)
@@ -48,5 +49,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/community/:path*", "/login", "/register"],
+  matcher: ["/community/:path*", "/composer/:path*", "/login", "/register"],
 }

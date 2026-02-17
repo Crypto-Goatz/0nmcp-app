@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import {
   Zap, Terminal, Server, Sparkles, GitBranch, Layers,
   Grid3X3, Power, Settings, Users, LayoutDashboard,
-  ChevronLeft, ChevronRight, Globe, MessageSquare
+  ChevronLeft, ChevronRight, Globe, MessageSquare, Combine
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import UserMenu from "./auth/UserMenu"
@@ -18,6 +18,7 @@ const NAV_ITEMS = [
   { href: "/services", label: "Services", icon: Server, color: "#00d4ff" },
   { href: "/skills", label: "Skills", icon: Sparkles, color: "#ff3d9a" },
   { href: "/builder", label: "Builder", icon: GitBranch, color: "#9945ff" },
+  { href: "/composer", label: "Composer", icon: Combine, color: "#ff6b35" },
   { href: "/architecture", label: "Arch", icon: Layers, color: "#ff6b35" },
   { href: "/apps", label: "Apps", icon: Grid3X3, color: "#00d4ff" },
   { href: "/community", label: "Community", icon: Users, color: "#9945ff" },
