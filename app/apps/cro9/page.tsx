@@ -7,7 +7,7 @@ import {
   BarChart3, Copy, Check, ArrowLeft, Shield, Eye,
   Zap, Globe, Code, Smartphone, ShoppingCart, Terminal
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { cn } from "@/lib/utils"
 
 type ConsentMode = "gdpr" | "ccpa" | "essential" | "disabled"
@@ -116,9 +116,7 @@ export default function CRO9Page() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-5xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-5xl mx-auto">
         <Link href="/apps" className="inline-flex items-center gap-1.5 text-xs text-text-muted hover:text-text mb-6 transition-colors">
           <ArrowLeft size={12} /> All Apps
         </Link>

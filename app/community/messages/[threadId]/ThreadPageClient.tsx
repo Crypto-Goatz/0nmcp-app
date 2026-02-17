@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import Nav from "@/components/Nav"
+
 import MessageThread from "@/components/community/MessageThread"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -20,8 +20,7 @@ export default function ThreadPageClient({ threadId, otherUser }: Props) {
 
   return (
     <>
-      <Nav />
-      <main className="max-w-2xl mx-auto px-4 pt-24 pb-4">
+      <main className="max-w-2xl mx-auto px-4 pt-8 pb-4">
         {/* Header */}
         <div className="flex items-center gap-3 mb-4">
           <button

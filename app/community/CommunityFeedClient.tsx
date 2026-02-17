@@ -1,6 +1,6 @@
 "use client"
 
-import Nav from "@/components/Nav"
+
 import Feed from "@/components/community/Feed"
 import PostComposer from "@/components/community/PostComposer"
 import GroupCard from "@/components/community/GroupCard"
@@ -21,8 +21,7 @@ type Group = {
 export default function CommunityFeedClient({ groups }: { groups: Group[] }) {
   return (
     <>
-      <Nav />
-      <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
+      <main className="max-w-6xl mx-auto px-4 pt-8 pb-12">
         <div className="mb-8">
           <h1 className="text-3xl font-black">
             <span className="gradient-text">Community</span>

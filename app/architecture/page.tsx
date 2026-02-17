@@ -5,7 +5,7 @@ import {
   Layers, GitBranch, Zap, ArrowRight, Shield, Server,
   Database, Terminal, Radio, Lock, Cpu, Globe
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { STATS } from "@/lib/catalog"
 
 const LEVELS = [
@@ -65,9 +65,7 @@ const TECH_STACK = [
 export default function ArchitecturePage() {
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple/5 border border-purple/20 text-purple text-xs font-bold mb-4">

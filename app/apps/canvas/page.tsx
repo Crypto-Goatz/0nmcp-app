@@ -11,7 +11,7 @@ import {
   AlignLeft, AlignCenter, AlignRight, Bold, Italic, Link2,
   List, ChevronDown, X, Zap, Globe, RotateCcw
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { cn } from "@/lib/utils"
 
 // ─── TYPES ────────────────────────────────────────────────
@@ -234,9 +234,7 @@ export default function CanvasPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
         <Link href="/apps" className="inline-flex items-center gap-1.5 text-xs text-text-muted hover:text-text mb-4 transition-colors">
           <ArrowLeft size={12} /> All Apps
         </Link>

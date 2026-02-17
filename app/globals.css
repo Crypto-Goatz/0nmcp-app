@@ -28,6 +28,16 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── ANIMATIONS ──────────────────────────────── */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
@@ -53,6 +63,22 @@ body {
   50% { transform: translateY(-6px); }
 }
 
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .animate-fade-in {
   animation: fade-in 0.4s ease-out both;
 }
@@ -69,6 +95,7 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* ─── GLASS EFFECTS ───────────────────────────── */
 .glass {
   background: rgba(15, 17, 40, 0.7);
   backdrop-filter: blur(20px);
@@ -81,6 +108,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* ─── GRADIENT TEXT ────────────────────────────── */
 .gradient-text {
   background: linear-gradient(135deg, #00ff88, #00d4ff, #9945ff);
   -webkit-background-clip: text;
@@ -88,6 +116,7 @@ body {
   background-clip: text;
 }
 
+/* ─── STAT CARD BORDER ────────────────────────── */
 .stat-card {
   position: relative;
   overflow: hidden;
@@ -103,4 +132,57 @@ body {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+}
+
+/* ─── HUD GRID OVERLAY ────────────────────────── */
+.hud-grid {
+  position: relative;
+}
+.hud-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.02;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* ─── GLOW CARD HOVER ─────────────────────────── */
+.glow-card {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.glow-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1);
+}
+.glow-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0,255,136,0.3), rgba(0,212,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.glow-card:hover::after {
+  opacity: 1;
+}
+
+/* ─── RESPONSIVE: HIDE SIDEBAR ON SMALL SCREENS ─ */
+@media (max-width: 1024px) {
+  main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }

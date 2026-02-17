@@ -8,7 +8,7 @@ import {
   Globe, Server, Sparkles, Copy, Check, ExternalLink,
   ArrowLeftRight, Filter, X
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import AddToList from "@/components/AddToList"
 import { cn } from "@/lib/utils"
 import {
@@ -90,9 +90,7 @@ export default function TurnItOnPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
         {/* Hero */}
         <div className="text-center mb-12">
           <motion.div

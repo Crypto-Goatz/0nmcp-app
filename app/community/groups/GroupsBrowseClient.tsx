@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Nav from "@/components/Nav"
+
 import GroupCard from "@/components/community/GroupCard"
 import { Search } from "lucide-react"
 
@@ -32,8 +32,7 @@ export default function GroupsBrowseClient({ groups }: { groups: Group[] }) {
 
   return (
     <>
-      <Nav />
-      <main className="max-w-4xl mx-auto px-4 pt-24 pb-12">
+      <main className="max-w-4xl mx-auto px-4 pt-8 pb-12">
         <h1 className="text-3xl font-black mb-2">Groups</h1>
         <p className="text-text-dim mb-6">Find your tribe in the 0nMCP community</p>
 

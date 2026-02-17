@@ -1,13 +1,14 @@
 "use client"
 
 import AuthProvider from "./auth/AuthProvider"
-import CommandCenter from "./CommandCenter"
+import DashboardShell from "./DashboardShell"
 
 export default function ClientShell({ children }: { children: React.ReactNode }) {
   return (
     <AuthProvider>
-      {children}
-      <CommandCenter />
+      <DashboardShell>
+        {children}
+      </DashboardShell>
     </AuthProvider>
   )
 }

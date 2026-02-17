@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import {
   ArrowLeft, Search, Wrench, Zap, Radio, ChevronRight, Terminal
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { SERVICES, CATEGORIES } from "@/lib/catalog"
 import { getToolsForService, type Tool } from "@/lib/tools-data"
 import { cn } from "@/lib/utils"
@@ -23,8 +23,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ id: st
   if (!service) {
     return (
       <div className="min-h-screen">
-        <Nav />
-        <div className="pt-24 text-center">
+        <div className="pt-8 text-center">
           <p className="text-text-dim">Service not found.</p>
           <Link href="/services" className="text-cyan text-sm mt-2 inline-block">Back to Services</Link>
         </div>
@@ -50,9 +49,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ id: st
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-5xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-5xl mx-auto">
         {/* Breadcrumb */}
         <Link href="/services" className="inline-flex items-center gap-1.5 text-xs text-text-muted hover:text-text mb-6 transition-colors">
           <ArrowLeft size={12} />

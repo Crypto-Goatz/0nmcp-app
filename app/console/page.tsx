@@ -6,7 +6,7 @@ import {
   Send, Terminal, Zap, CheckCircle2, XCircle, Loader2,
   Sparkles, Server, ChevronRight, Clock, Copy, Check
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { useServerHealth } from "@/components/ServerStatus"
 import { STATS, SERVICES } from "@/lib/catalog"
 
@@ -130,9 +130,7 @@ export default function ConsolePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Nav />
-
-      <div className="flex-1 flex flex-col pt-16 max-w-5xl mx-auto w-full px-4 sm:px-6">
+      <div className="flex-1 flex flex-col pt-8 max-w-5xl mx-auto w-full px-4 sm:px-6">
         {/* Status bar */}
         <div className="flex items-center justify-between py-4 border-b border-border">
           <div className="flex items-center gap-3">

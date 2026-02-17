@@ -8,7 +8,7 @@ import {
   RotateCcw, Sparkles, ChevronDown, GripVertical, Timer,
   StickyNote, Loader2, X, Clock, Zap
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { cn } from "@/lib/utils"
 
 interface Task {
@@ -184,8 +184,6 @@ export default function FocusPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
       {/* Progress bar */}
       <div className="fixed top-16 left-0 right-0 h-0.5 bg-border z-40">
         <motion.div
@@ -196,7 +194,7 @@ export default function FocusPage() {
         />
       </div>
 
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
         <Link href="/apps" className="inline-flex items-center gap-1.5 text-xs text-text-muted hover:text-text mb-6 transition-colors">
           <ArrowLeft size={12} /> All Apps
         </Link>

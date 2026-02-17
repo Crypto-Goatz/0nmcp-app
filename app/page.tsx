@@ -5,7 +5,7 @@ import {
   Zap, Server, Layers, Radio, Sparkles, ArrowRight,
   GitBranch, Shield, Globe, ChevronRight, Terminal, Power
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 
 function StatCard({ value, label, color, delay }: { value: number | string; label: string; color: string; delay: number }) {
   return (
@@ -83,10 +83,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
       {/* Hero */}
-      <section className="pt-28 pb-16 px-4 sm:px-6 relative overflow-hidden">
+      <section className="pt-8 pb-16 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
           backgroundSize: "60px 60px"

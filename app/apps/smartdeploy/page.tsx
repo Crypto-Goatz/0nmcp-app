@@ -9,7 +9,7 @@ import {
   ArrowRight, Zap, Shield, Eye, Play, Layers, GitBranch,
   CheckCircle2, Circle, Loader2, Package, Settings, Code2
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { cn } from "@/lib/utils"
 
 // ─── TYPES ────────────────────────────────────────────────
@@ -228,9 +228,7 @@ export default function SmartDeployPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
         <Link href="/apps" className="inline-flex items-center gap-1.5 text-xs text-text-muted hover:text-text mb-4 transition-colors">
           <ArrowLeft size={12} /> All Apps
         </Link>

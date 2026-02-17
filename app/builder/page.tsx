@@ -7,7 +7,7 @@ import {
   Sparkles, Server, Zap, Radio, ChevronDown, ArrowRight,
   Layers, Download, CheckCircle2, Terminal, X
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { SERVICES, SKILLS } from "@/lib/catalog"
 import { TOOLS_BY_SERVICE, type Tool } from "@/lib/tools-data"
 import { cn } from "@/lib/utils"
@@ -102,9 +102,7 @@ export default function BuilderPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 mb-8">
           <GitBranch size={24} className="text-purple" />
           <h1 className="text-3xl font-black tracking-tight">Skill Builder</h1>

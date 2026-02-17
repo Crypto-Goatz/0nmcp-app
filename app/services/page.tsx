@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import {
   Search, Server, ArrowRight, Filter, BarChart3
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import AddToList from "@/components/AddToList"
 import { SERVICES, CATEGORIES, STATS, type Service } from "@/lib/catalog"
 import { cn } from "@/lib/utils"
@@ -35,9 +35,7 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-2">

@@ -1,6 +1,6 @@
 "use client"
 
-import Nav from "@/components/Nav"
+
 import GroupHeader from "@/components/community/GroupHeader"
 import PostComposer from "@/components/community/PostComposer"
 import Feed from "@/components/community/Feed"
@@ -21,8 +21,7 @@ type Group = {
 export default function GroupDetailClient({ group }: { group: Group }) {
   return (
     <>
-      <Nav />
-      <main className="max-w-3xl mx-auto px-4 pt-24 pb-12">
+      <main className="max-w-3xl mx-auto px-4 pt-8 pb-12">
         <GroupHeader group={group} />
         <div className="mt-6 flex flex-col gap-4">
           <PostComposer groupId={group.id} placeholder={`Post in ${group.name}...`} />

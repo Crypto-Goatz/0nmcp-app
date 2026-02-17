@@ -9,7 +9,7 @@ import {
   Sparkles, RotateCcw, Trash2, Terminal, ExternalLink,
   ChevronDown, WifiOff, Wifi, MessageSquare, Bot
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { cn } from "@/lib/utils"
 import { EXPANSION_STATS } from "@/lib/services-expansion"
 
@@ -332,9 +332,7 @@ export default function AssistantPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Nav />
-
-      <div className="pt-24 pb-4 px-4 sm:px-6 max-w-5xl mx-auto w-full flex-1 flex flex-col">
+      <div className="pt-8 pb-4 px-4 sm:px-6 max-w-5xl mx-auto w-full flex-1 flex flex-col">
         <Link href="/apps" className="inline-flex items-center gap-1.5 text-xs text-text-muted hover:text-text mb-4 transition-colors">
           <ArrowLeft size={12} /> All Apps
         </Link>

@@ -7,7 +7,7 @@ import {
   Shield, Zap, Globe, Eye, MessageSquare, Target, Power,
   GraduationCap, Bot, Brain, Rocket, Paintbrush
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import AddToList from "@/components/AddToList"
 
 const APPS = [
@@ -126,9 +126,7 @@ const APPS = [
 export default function AppsPage() {
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange/5 border border-orange/20 text-orange text-xs font-bold mb-4">

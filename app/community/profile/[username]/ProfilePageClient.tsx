@@ -1,6 +1,6 @@
 "use client"
 
-import Nav from "@/components/Nav"
+
 import ProfileHeader from "@/components/community/ProfileHeader"
 import Feed from "@/components/community/Feed"
 
@@ -24,8 +24,7 @@ type Profile = {
 export default function ProfilePageClient({ profile }: { profile: Profile }) {
   return (
     <>
-      <Nav />
-      <main className="max-w-3xl mx-auto px-4 pt-24 pb-12">
+      <main className="max-w-3xl mx-auto px-4 pt-8 pb-12">
         <ProfileHeader profile={profile} />
         <div className="mt-6">
           <h2 className="text-sm font-bold text-text-dim mb-3">Posts</h2>

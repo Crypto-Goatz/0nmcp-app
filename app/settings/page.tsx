@@ -11,7 +11,7 @@ import {
   CheckCircle2, XCircle, Loader2, ArrowRight,
   Database, Layers, ChevronDown, Search, Rocket
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import { cn } from "@/lib/utils"
 
 // ─── TYPES ────────────────────────────────────────────────
@@ -184,9 +184,7 @@ export default function SettingsPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-4 mb-6">
           <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-neon/15">

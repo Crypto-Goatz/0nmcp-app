@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import Nav from "@/components/Nav"
+
 import PostCard from "@/components/community/PostCard"
 import PostComposer from "@/components/community/PostComposer"
 import { ArrowLeft } from "lucide-react"
@@ -28,8 +28,7 @@ export default function PostThreadClient({ post, replies }: { post: Post; replie
 
   return (
     <>
-      <Nav />
-      <main className="max-w-3xl mx-auto px-4 pt-24 pb-12">
+      <main className="max-w-3xl mx-auto px-4 pt-8 pb-12">
         <button
           onClick={() => router.back()}
           className="flex items-center gap-1.5 text-sm text-text-dim hover:text-text mb-4 transition-colors"

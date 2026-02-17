@@ -7,7 +7,7 @@ import {
   Sparkles, Play, ChevronRight, Terminal, Layers, GitBranch,
   Zap, ArrowRight, Shield, Clock, Star
 } from "lucide-react"
-import Nav from "@/components/Nav"
+
 import AddToList from "@/components/AddToList"
 import { SKILLS, SERVICES } from "@/lib/catalog"
 
@@ -25,9 +25,7 @@ export default function SkillsPage() {
 
   return (
     <div className="min-h-screen">
-      <Nav />
-
-      <div className="pt-24 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="pt-8 pb-16 px-4 sm:px-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
