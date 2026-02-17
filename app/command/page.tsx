@@ -347,6 +347,8 @@ function StatPanel({ label, value, icon, color, trend, pulse }: {
   trend?: string
   pulse?: boolean
 }) {
+  const iconElement = icon as React.ReactElement<{ style?: React.CSSProperties; className?: string }>
+  
   return (
     <div className="command-panel">
       <div className="flex items-center justify-between mb-3">
@@ -355,7 +357,7 @@ function StatPanel({ label, value, icon, color, trend, pulse }: {
             className={`w-8 h-8 rounded-lg flex items-center justify-center ${pulse ? 'animate-pulse' : ''}`}
             style={{ background: `${color}15` }}
           >
-            {React.cloneElement(icon as React.ReactElement, { style: { color } })}
+            {React.cloneElement(iconElement, { style: { color }, className: iconElement.props.className })}
           </div>
           <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">{label}</span>
         </div>
@@ -373,6 +375,8 @@ function StatPanel({ label, value, icon, color, trend, pulse }: {
 }
 
 function ActionButton({ icon, label, color }: { icon: React.ReactNode; label: string; color: string }) {
+  const iconElement = icon as React.ReactElement<{ style?: React.CSSProperties; className?: string }>
+  
   return (
     <button
       className="action-button group"
@@ -382,7 +386,7 @@ function ActionButton({ icon, label, color }: { icon: React.ReactNode; label: st
         className="w-10 h-10 rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform"
         style={{ background: `${color}15` }}
       >
-        {React.cloneElement(icon as React.ReactElement, { style: { color } })}
+        {React.cloneElement(iconElement, { style: { color }, className: iconElement.props.className })}
       </div>
       <span className="text-xs font-semibold text-text">{label}</span>
     </button>
