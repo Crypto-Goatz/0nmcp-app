@@ -5,10 +5,12 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   Zap, Server, Layers, Sparkles, Terminal, Settings,
-  Globe, Menu, X, LayoutDashboard, GitBranch, Grid3X3, Power
+  Globe, Menu, X, LayoutDashboard, GitBranch, Grid3X3, Power, Users
 } from "lucide-react"
 import { STATS } from "@/lib/catalog"
 import { cn } from "@/lib/utils"
+import UserMenu from "./auth/UserMenu"
+import NotificationBell from "./community/NotificationBell"
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: LayoutDashboard },
@@ -18,6 +20,7 @@ const NAV_ITEMS = [
   { href: "/builder", label: "Builder", icon: GitBranch },
   { href: "/architecture", label: "Architecture", icon: Layers },
   { href: "/apps", label: "Apps", icon: Grid3X3 },
+  { href: "/community", label: "Community", icon: Users },
   { href: "/turn-it-on", label: "Turn it 0n", icon: Power },
   { href: "/settings", label: "Settings", icon: Settings },
 ]
@@ -66,15 +69,23 @@ export default function Nav() {
             <Globe size={12} />
             0nmcp.com
           </a>
+          <div className="ml-2 flex items-center gap-1">
+            <NotificationBell />
+            <UserMenu />
+          </div>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-white/[0.06] text-text-dim"
-        >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile right side */}
+        <div className="md:hidden flex items-center gap-2">
+          <NotificationBell />
+          <UserMenu />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2 rounded-lg hover:bg-white/[0.06] text-text-dim"
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}

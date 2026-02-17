@@ -9,6 +9,7 @@
     "stats": "node scripts/generate-stats.js --all"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.95.3",
     "@types/node": "^25.2.3",
     "@types/react": "^19.2.14",
