@@ -76,7 +76,7 @@ export default function ArchitecturePage() {
             <span className="gradient-text">Three-Level Execution</span>
           </h1>
           <p className="text-text-dim max-w-2xl mx-auto">
-            The patented architecture that powers {STATS.tools} tools across {STATS.services} services.
+            The patent-pending architecture that powers {STATS.tools} tools across {STATS.services} services.
             Pipeline → Assembly Line → Radial Burst.
           </p>
         </div>

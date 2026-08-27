@@ -216,7 +216,7 @@ export default function Home() {
       <section className="py-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-black tracking-tight mb-2">Patented Architecture</h2>
+            <h2 className="text-3xl font-black tracking-tight mb-2">Patent-Pending Architecture</h2>
             <p className="text-sm text-text-dim">US Patent Application #63/968,814 — Three-Level Execution</p>
           </div>
 
